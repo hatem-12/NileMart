@@ -6,15 +6,14 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode
 @Builder
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class Product {
-    private String name;
-    private String sku;
+    private final String sku;
+    private final String name;
+    private final String category;
     private BigDecimal price;
-    private String category;
+    private int stockQuantity;
     private boolean isActive;
    }
